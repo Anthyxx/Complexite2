@@ -22,7 +22,16 @@ void affiche_tableau(int *t, int nbel){
 // A COMPLETER
 // recherche un element dans un tableau
 // renvoie l'indice où se trouve l'element, -1 sinon
-int recherche_tableau(int *t, int nbel, int info){
+int recherche_tableau(int *t, int nbel, int info) {
+    int i=0;
+    while(i<nbel){
+        if (t[i] == info) {
+            return i;
+        }
+        else{
+            i++;
+        }
+    }
     return -1;
 }
 
@@ -30,6 +39,16 @@ int recherche_tableau(int *t, int nbel, int info){
 // Ajoute un element a la fin du tableau
 // Retourne le nouveau nombre d'element
 int ajout_tableau(int *t, int nbel, int info){
+    int i=0;
+    while(i<nbel){
+        if (t[i] == NULL){
+            t[i]=info;
+            return nbel+1;
+        }
+        else{
+            i++;
+        }
+    }
     return 0;
 }
 
